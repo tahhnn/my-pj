@@ -1,0 +1,16 @@
+<div class="bg-white h-[100vh] p-5">
+  <base-button
+    customClass="float-right"
+    type="danger"
+    icon="close"
+    (buttonClick)="close()"
+  ></base-button>
+  <p class="text-3xl">Confirm action</p>
+  <div class="">
+    <mat-divider class="opacity-50"></mat-divider>
+    <p class="p-1 text-xl">Are you sure about this ?</p>
+    <mat-divider class="opacity-50"></mat-divider>
+  </div>
+
+  <base-button customClass="float-right mt-5" label="Delete"></base-button>
+</div>

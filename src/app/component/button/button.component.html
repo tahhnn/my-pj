@@ -1,0 +1,9 @@
+<button
+  [ngClass]="buttonClass"
+  [disabled]="disabled"
+  (click)="onClick()"
+  [type]="type"
+>
+  <app-card [icon]="icon"></app-card>
+  <span *ngIf="label">{{ label }}</span>
+</button>

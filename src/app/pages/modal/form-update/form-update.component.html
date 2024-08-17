@@ -1,0 +1,28 @@
+<base-form
+  title="Update Account"
+  [hasCloseButton]="true"
+  [hasCancelButton]="true"
+>
+  <div class="w-[90%] mx-auto">
+    <div>
+      <base-input label="Email"></base-input>
+    </div>
+    <div class="my-5">
+      <base-input label="First Name"></base-input>
+    </div>
+    <div>
+      <base-input label="Last Name"></base-input>
+    </div>
+  </div>
+  <div class="py-5">
+    <mat-radio-group
+      class="flex justify-between"
+      aria-label="Select an option"
+      appearance="none"
+    >
+      <mat-radio-button value="1">Option 1</mat-radio-button>
+      <mat-radio-button value="2">Option 2</mat-radio-button>
+      <mat-radio-button checked value="3">Option 3</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</base-form>

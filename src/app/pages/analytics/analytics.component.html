@@ -1,0 +1,16 @@
+<div class="w-full flex">
+
+  <div class="w-[45%] flex-1">
+    <app-line-chart
+      [titleChart]="'Line Chart'"
+      [xaxisCategories]="months"
+      [dataChart]="salesData"
+    ></app-line-chart>
+  </div>
+  <div class="w-[30%]">
+    <app-radiant-bar-chart
+      [dataChart]="fruitsData"
+      [labels]="labels"
+    ></app-radiant-bar-chart>
+  </div>
+</div>

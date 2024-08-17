@@ -1,0 +1,10 @@
+services:
+  my-pj:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - .:/project

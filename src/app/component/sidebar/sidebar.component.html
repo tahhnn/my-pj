@@ -1,0 +1,16 @@
+<div *ngFor="let tab of tabs">
+  <div
+    [ngClass]="{
+      'bg-blue-400': isActive(tab.link),
+      'hover:bg-blue-400': true
+    }"
+  >
+    <base-tab
+      title="{{ tab.title }}"
+      link="{{ tab.link }}"
+      icon="{{ tab.icon }}"
+      (click)="setActive(tab.link)"
+    ></base-tab>
+    <mat-divider class="opacity-50"></mat-divider>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mdc-dialog--open .mat-mdc-dialog-surface, .mdc-dialog--closing .mat-mdc-dialog-surface{
+    background: white;
+}
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    display: none !important; 
+    opacity: 0 !important; /*click effect color change*/
+    background-color: #422873 !important;  }
+    
+    .mat-radio-button.mat-accent .mat-radio-inner-circle {
+        display: none !important; 
+
+    background-color: #422873 !important; /*inner circle color change*/  }
+    
+    .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+        display: none !important; 
+
+    border-color: #422873 !important; /*outer ring color change*/  
+    }
+
+    div.mat-mdc-select-panel{
+        background-color: white !important;
+    }
+    .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple){
+        background-color: rgba(128, 128, 128, 0.347) !important;
+        color: white !important;
+    }
+    .mdc-list-item__primary-text{
+        color: black !important;
+    }
+    .mdc-label{
+        color: black !important;
+    }
+    .mdc-radio__native-control{
+        background-color: black !important;
+    }
+    .mat-mdc-radio-button .mdc-radio__native-control{
+        opacity: 1 !important;
+        width: 1.25rem !important;
+        height: 1.25rem !important;
+    }
+    .mdc-radio__background{
+        display: none !important;
+    }
+    .mat-mdc-radio-button .mdc-radio__native-control{
+        top:50% !important;
+        transform: translateY(-50%);
+        left: 50% !important;
+    }

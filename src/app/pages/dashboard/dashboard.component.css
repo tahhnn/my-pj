@@ -1,0 +1,29 @@
+.mat-mdc-select{
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.mat-mdc-select-arrow{
+    color: black;
+}
+.mat-mdc-table{
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.377);
+}
+.mat-mdc-header-cell{
+    border-right: 1px solid rgba(0, 0, 0, 0.377);
+
+    color: black
+}
+.mat-mdc-cell{
+    color: black;
+    border-right: 1px solid rgba(0, 0, 0, 0.377);
+}
+.mat-elevation-z8{
+    
+    box-shadow: none;
+}
+.mat-mdc-dialog-surface {
+    background-color: greenyellow !important;
+ }

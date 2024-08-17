@@ -1,0 +1,32 @@
+.box {  
+    --w: 20px;
+    --b: 3px;
+    --r: 20px;
+    padding: var(--b); 
+    
+    position:relative;
+    width:50px;
+    height:50px;
+    box-sizing:border-box;
+    margin:5px;
+    display:inline-flex;
+    font-size:30px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+  }
+  .box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    padding: var(--b);
+    border-radius: var(--r);
+    -webkit-mask:
+      linear-gradient(  0deg,#000 calc(2*var(--b)),#0000 0) 50% var(--b)/calc(100% - 2*var(--w)) 100% repeat-y,
+      linear-gradient(-90deg,#000 calc(2*var(--b)),#0000 0) var(--b) 50%/100% calc(100% - 2*var(--w)) repeat-x,
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+  }

@@ -1,0 +1,22 @@
+<div [ngClass]="formContainerClass">
+  <base-button
+    icon="close"
+    classIcon="close"
+    customClass="float-end close"
+    type="danger"
+    *ngIf="hasCloseButton"
+  ></base-button>
+  <form [ngClass]="formClass">
+    <p *ngIf="title" [ngClass]="titleClass">{{ title }}</p>
+    <ng-content></ng-content>
+    <div class="flex justify-end gap-4">
+      <base-button customClass="mt-5 float-end" label="Send"></base-button>
+      <base-button
+        *ngIf="hasCancelButton"
+        customClass="mt-5 float-end close"
+        label="Cancel"
+        type="danger"
+      ></base-button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,123 @@
+<!-- <p>Dashboard workinggg</p> -->
+<!-- 
+<base-button
+  [disabled]="false"
+  icon="settings"
+  customClass=""
+  type="danger"
+></base-button>
+<form action="" class="w-[50%]">
+  <base-input label="Username"></base-input>
+</form>
+ -->
+<div class="border rounded-xl">
+  <div class="flex justify-between p-4 border-b bg-gray-100">
+    <p class="font-semibold">User Management</p>
+    <base-button
+      [disabled]="false"
+      label="Password Policy"
+      icon="settings"
+      customClass="text-white"
+      classIcon="text-black"
+      (buttonClick)="redirectTo()"
+    ></base-button>
+    <base-button
+      [disabled]="false"
+      label="Add new account"
+      icon="add_circle"
+      customClass="text-white"
+      classIcon="text-white"
+      type="success"
+      (buttonClick)="openDialogCreate()"
+    ></base-button>
+  </div>
+  <div class="flex justify-between">
+    <div class="flex items-center p-5 gap-2">
+      <p>Show</p>
+      <div class="w-[50px]">
+        <base-input defaultValue="10"></base-input>
+      </div>
+      <p>entries</p>
+    </div>
+    <div class="flex items-center p-5 gap-2 w-[20%]">
+      <mat-select class="" [formControl]="defaultValue">
+        <mat-option value="red">Red</mat-option>
+        <mat-option value="green">Green</mat-option>
+        <mat-option value="blue">Blue</mat-option>
+      </mat-select>
+    </div>
+    <div class="flex gap-2 items-center pr-4">
+      <base-input
+        label="Search"
+        classInput="rounded-none"
+        [IsformControl]="false"
+      ></base-input>
+    </div>
+  </div>
+  <div class="p-5">
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      class="mat-elevation-z8"
+      matSort
+      matSortActive="ID"
+    >
+      <ng-container matColumnDef="ID">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let element">{{ element.ID }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef>Role</th>
+        <td mat-cell *matCellDef="let element">{{ element.role }}</td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+      <ng-container matColumnDef="">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>Action</th>
+        <td mat-cell class="flex gap-3" *matCellDef="let element">
+          <base-button
+            customClass="my-4 bg-gray-400"
+            classIcon="text-black"
+            icon="settings"
+            (buttonClick)="openDialogUpdate()"
+          ></base-button>
+          <base-button
+            customClass="my-4"
+            type="danger"
+            icon="delete"
+            (buttonClick)="alertDelete()"
+          ></base-button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <div class="mt-3 flex justify-between">
+      <p>Showing 1 to 1 of {{ count }} entries</p>
+      <div class="flex gap-3">
+        <base-button customClass="bg-gray-300 text-black" label="Previous"
+          >Previous</base-button
+        >
+        <base-button label="1"></base-button>
+        <base-button customClass="bg-gray-300 text-black" label="Next"
+          >Next</base-button
+        >
+      </div>
+    </div>
+  </div>
+</div>

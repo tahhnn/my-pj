@@ -1,0 +1,19 @@
+<div class="w-full" *ngIf="IsformControl">
+  <p *ngIf="label">{{ label }}:</p>
+  <input
+    [type]="type"
+    [ngClass]="classInputStyle"
+    [placeholder]="placeholder"
+    defaultValue="{{ defaultValue }}"
+  />
+</div>
+
+<div class="w-full flex gap-2 items-end" *ngIf="!IsformControl">
+  <p *ngIf="label">{{ label }}:</p>
+  <input
+    [type]="type"
+    [ngClass]="classInputStyle"
+    [placeholder]="placeholder"
+    defaultValue="{{ defaultValue }}"
+  />
+</div>
